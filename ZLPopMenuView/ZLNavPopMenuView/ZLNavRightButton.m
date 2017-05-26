@@ -66,6 +66,7 @@
     [backView addGestureRecognizer:tap];
     
     self.menuView = [[ZLPopMenuView alloc]initWithMenus:self.menus callBack:self.callBack];
+    self.menuView.alpha = 0.0f;
     [[UIApplication sharedApplication].keyWindow.rootViewController.view addSubview:self.menuView];
     [self.menuView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.right.mas_equalTo(-5);
@@ -83,6 +84,7 @@
     }];
     
     [UIView animateWithDuration:0.2f animations:^{
+        self.menuView.alpha = 1.0f;
         [[UIApplication sharedApplication].keyWindow.rootViewController.view layoutIfNeeded];
     }];
 }
@@ -98,6 +100,7 @@
         make.height.mas_equalTo(0);
     }];
     [UIView animateWithDuration:0.2 animations:^{
+        self.menuView.alpha = 0.0f;
         [[UIApplication sharedApplication].keyWindow.rootViewController.view layoutIfNeeded];
     } completion:^(BOOL finished) {
         if (self.menuView) {
