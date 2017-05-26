@@ -2,7 +2,7 @@
 IOS类似QQ的导航栏右上角弹出更多菜单。
 
 
-![image](https://github.com/czl0325/ZLPopMenuView/屏幕快照 2017-05-25 17.19.09.png)
+![image](https://github.com/czl0325/ZLPopMenuView/blob/master/ZLPopMenuView.png?raw=true)
 
 
 调用方法：
